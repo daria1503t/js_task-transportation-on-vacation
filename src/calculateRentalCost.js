@@ -5,7 +5,7 @@
  */
 function calculateRentalCost(days) {
   const pricePerDay = 40;
-  let rentalCost = days * pricePerDay;
+  const rentalCost = days * pricePerDay;
   const shortPeriod = 3;
   const mediumPeriod = 6;
   const longPeriod = 7;
@@ -13,11 +13,11 @@ function calculateRentalCost(days) {
   const longPeriodDiscount = 50;
 
   if (days >= shortPeriod && days <= mediumPeriod) {
-    rentalCost -= basicDiscount;
+    return rentalCost - basicDiscount;
   }
 
   if (days >= longPeriod) {
-    rentalCost -= longPeriodDiscount;
+    return rentalCost - longPeriodDiscount;
   }
 
   return rentalCost;
